@@ -50,10 +50,10 @@ function Location (requestCity, geoData){
 function LocationWeather (weatherData){
     let dateString = new Date(weatherData.valid_date);
     const options = { weekday: 'short', year: 'numeric', month: 'long', day: '2-digit' };
-    let formattedTime = dateString.toLocaleDateString('en-US', options).split(',').join(' ');
+    let formattedTime = dateString.toLocaleDateString('en-US', options).split(',').join('');
     // console.log(formattedTime);
 
-    this.forcast = weatherData.weather.description;
+    this.forecast = weatherData.weather.description;
     this.time = formattedTime;
 }
 
